@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Вероятные причины болезней — аккордеон</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #faf9f6;
+      margin: 0;
+      padding: 0 10px 40px 10px;
+      color: #252525;
+    }
+    .intro {
+      margin: 1.5em 0 2em 0;
+      font-size: 1.07em;
+      max-width: 800px;
+    }
+    .letter-section {
+      margin-bottom: 1.5em;
+      border-radius: 7px;
+      background: #fff;
+      box-shadow: 0 2px 7px #0001;
+      max-width: 800px;
+      padding: 0.5em 0.5em 0.5em 1.2em;
+    }
+    .letter-title {
+      font-size: 1.7em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #b6001c;
+      user-select: none;
+      margin: 0.3em 0;
+      transition: color 0.15s;
+      outline: none;
+    }
+    .letter-title:focus, .letter-section.open > .letter-title {
+      color: #2674c7;
+    }
+    .letter-diseases {
+      display: none;
+      margin-left: 1.4em;
+      margin-bottom: 0.7em;
+    }
+    .letter-section.open .letter-diseases {
+      display: block;
+      animation: fadein 0.3s;
+    }
+    @keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    .disease-item {
+      margin-bottom: 0.38em;
+    }
+    .disease-title {
+      font-size: 1.08em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #b6001c;
+      margin: 0.2em 0;
+      user-select: none;
+      outline: none;
+      display: inline-block;
+    }
+    .disease-title:focus, .disease-item.open > .disease-title {
+      color: #2674c7;
+    }
+    .disease-details {
+      display: none;
+      margin: 0.16em 0 0.36em 1.5em;
+      font-size: 1em;
+      background: #f7f0ee;
+      border-left: 3px solid #b6001c33;
+      border-radius: 0 5px 5px 0;
+      padding: 0.4em 1.5em 0.5em 0.7em;
+      max-width: 640px;
+    }
+    .disease-item.open .disease-details {
+      display: block;
+      animation: fadein 0.25s;
+    }
+
+    .disease-name {
+      color: #b6001c;
+    }
+    .author-zhikarencev {
+      color: #2674c7;
+      font-weight: normal;
+    }
+    .author-norbekov {
+      color: #1e9632;
+      font-weight: normal;
+    }
+    .author-hei {
+      color: #fa9900;
+      font-weight: normal;
+    }
+
+    .disease-details b, .disease-details strong {
+      color: #1e9632;
+    }
+    .disease-details .minus {
+      color: #ca2222;
+      font-weight: bold;
+      margin-right: 0.5em;
+    }
+    .disease-details .plus {
+      color: #188c38;
+      font-weight: bold;
+      margin-right: 0.5em;
+    }
+    .disease-details .about {
+      color: #a05900;
+      font-style: italic;
+      display: block;
+      margin: 0.4em 0 0.2em 0;
+    }
+    /* Для удобства: выделение при tab */
+    .letter-title:focus, .disease-title:focus {
+      outline: 2px solid #2674c7;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Вероятные причины болезней, порождаемые нашими мыслями</h1>
+  <div class="intro">
+    <p>По Луизе Хэй и Жикаренцеву</p>
+    <p>По мнению некоторых психологов, любая болезнь не является случайностью: существует связь между духовным и физическим, между нашими мыслями и состоянием нашего физического тела. Решив покончить с какой-нибудь болезнью, следует прежде всего выявить ментальную (мысленную) причину её возникновения. Симптомы болезни — это всего лишь отражение внутренних глубинных процессов. Вам придётся углубиться в себя, чтобы обнаружить и нейтрализовать духовную причину недуга.</p>
+    <p>Если желаете узнать, откуда Луизе Хэй стало известно, что ход развития болезни можно повернуть вспять простым изменением своего стереотипного мышления, то <a href="#">прочитайте это</a>.</p>
+    <p>Приведённый перечень мысленных стереотипов был составлен американским психологом Луизой Хэй в результате многолетних исследований, на основе своего опыта работы с пациентами. Также мы приводим трактовку российского психолога Владимира Жикаренцева.</p>
+    <ul>
+      <li><span class="minus">–</span> психологическая причина болезни</li>
+      <li><span class="plus">+</span> новый стереотип мышления, который ведёт к выздоровлению</li>
+      <li><span class="about">~</span> за что отвечает орган в психологическом смысле</li>
+    </ul>
+    <strong>Рекомендации Луизы Хэй по использованию аффирмаций:</strong>
+    <ol>
+      <li>Найдите ментальную причину. Посмотрите, подходит ли она вам. Если нет, подумайте, какие мысли могли спровоцировать заболевание?</li>
+      <li>Несколько раз повторите стереотип.</li>
+      <li>Внедрите в сознание мысль, что вы встали на путь выздоровления.</li>
+      <li>Данную медитацию следует повторять ежедневно, т.к. она создаёт здоровое сознание и, как следствие, здоровое тело.</li>
+    </ol>
+  </div>
+
+  <!-- Буква А -->
+  <div class="letter-section" id="letter-A">
+    <div class="letter-title" tabindex="0">А</div>
+    <div class="letter-diseases">
+
+      <div class="disease-item">
+        <div class="disease-title" tabindex="0">
+          <span class="disease-name">Абсцесс</span> – (<span class="author-zhikarencev">В. Жикаренцев</span>)
+        </div>
+        <div class="disease-details">
+          <span class="minus">–</span> человека волнуют мысли о зле, которое ему причинили, о невнимании и об отмщении.<br>
+          <span class="plus">+</span> я отпускаю свои мысли, даю им уйти. прошлое ушло. я чувствую в душе мир.
+        </div>
+      </div>
+
+      <div class="disease-item">
+        <div class="disease-title" tabindex="0">
+          <span class="disease-name">Аддисона болезнь</span> – (<span class="author-hei">Луиза Хэй</span>)
+        </div>
+        <div class="disease-details">
+          <span class="minus">–</span> серьезная эмоциональная недостаточность. злость на себя.<br>
+          <span class="plus">+</span> я с любовью забочусь о своем теле, мыслях и эмоциях.
+        </div>
+      </div>
+
+      <div class="disease-item">
+        <div class="disease-title" tabindex="0">
+          <span class="disease-name">Аддисона болезнь</span> – (<span class="author-zhikarencev">В. Жикаренцев</span>)
+        </div>
+        <div class="disease-details">
+          <span class="minus">–</span> сильная нехватка эмоциональной подпитки. гнев на себя.<br>
+          <span class="plus">+</span> я с любовью забочусь о своем теле, уме и своих эмоциях.
+        </div>
+      </div>
+
+      <div class="disease-item">
+        <div class="disease-title" tabindex="0">
+          <span class="disease-name">Аденоиды</span> – (<span class="author-hei">Луиза Хэй</span>)
+        </div>
+        <div class="disease-details">
+          <span class="minus">–</span> неурядицы в семье. ощущение ребенка, что он никому не нужен.<br>
+          <span class="plus">+</span> это желанный, любимый ребенок.
+        </div>
+      </div>
+
+      <div class="disease-item">
+        <div class="disease-title" tabindex="0">
+          <span class="disease-name">Аденоиды</span> – (<span class="author-zhikarencev">В. Жикаренцев</span>)
+        </div>
+        <div class="disease-details">
+          <span class="minus">–</span> семейные трения, споры. до некоторой степени - присутствие детского чувства нежеланности.<br>
+          <span class="plus">+</span> этот ребенок желанный, и его появление на свет было встречено с радостью, он глубоко любим.
+        </div>
+      </div>
+
+      <div class="disease-item">
+        <div class="disease-title" tabindex="0">
+          <span class="disease-name">Адреналиновые болезни</span> – (<span class="author-zhikarencev">В. Жикаренцев</span>)
+        </div>
+        <div class="disease-details">
+          <span class="minus">–</span> пораженчество. претит забота о себе. беспокойство, тревога.<br>
+          <span class="plus">+</span> я люблю себя и одобряю свои поступки и мысли. забота о самом себе безопасна для меня и принесет мне только пользу.
+        </div>
+      </div>
+
+      <div class="disease-item">
+        <div class="disease-title" tabindex="0">
+          <span class="disease-name">Алзейнера болезнь</span> – (<span class="author-zhikarencev">В. Жикаренцев</span>)
+        </div>
+        <div class="disease-details">
+          <span class="minus">–</span> желание покинуть эту планету. неспособность посмотреть в лицо жизни такой, какая она есть. отказ взаимодействовать с миром таким, какой он есть. безнадежность и беспомощность. гнев.<br>
+          <span class="plus">+</span> все, что в этой жизни происходит, правильно и имеет свой смысл в пространстве и времени. божественный план претворяется в жизнь.
+        </div>
+      </div>
+
+      <div class="disease-item">
+        <div class="disease-title" tabindex="0">
+          <span class="disease-name">Алкоголизм</span> – (<span class="author-hei">Луиза Хэй</span>)
+        </div>
+        <div class="disease-details">
+          <span class="minus">–</span> все бессмысленно. ощущение бренности существования, чувство вины, неадекватности и самоотрицания.<br>
+          <span class="plus">+</span> я живу настоящим. я делаю правильный выбор. я люблю и ценю себя.
+        </div>
+      </div>
+
+      <div class="disease-item">
+        <div class="disease-title" tabindex="0">
+          <span class="disease-name">Алкоголизм</span> – (<span class="author-zhikarencev">В. Жикаренцев</span>)
+        </div>
+        <div class="disease-details">
+          <span class="minus">–</span> какая польза от всего этого? чувство бесполезности, пустоты, вины, несоответствия окружающему миру. отрицание себя.<br>
+          <span class="plus">+</span> я живу здесь и сейчас. каждый момент в моей жизни несет в себе новое. я выбираю для себя способность увидеть свою ценность для окружающего мира. я люблю себя и одобряю свои действия и мысли.
+        </div>
+      </div>
+
+      <div class="disease-item">
+        <div class="disease-title" tabindex="0">
+          <span class="disease-name">Аллергия</span> – (<span class="author-hei">Луиза Хэй</span>)
+        </div>
+        <div class="disease-details">
+          <span class="minus">–</span> на кого у вас аллергия? отрицание собственной силы.<br>
+          <span class="plus">+</span> мир безопасен и дружелюбен. мне спокойно и надежно, я в ладу с жизнью.
+        </div>
+      </div>
+
+      <div class="disease-item">
+        <div class="disease-title" tabindex="0">
+          <span class="disease-name">Аллергия</span> – (<span class="author-zhikarencev">В. Жикаренцев</span>)
+        </div>
+        <div class="disease-details">
+          <span class="minus">–</span> кого вы не переносите? отрицание своей собственной силы.<br>
+          <span class="plus">+</span> мир - безопасное место, он дружественно настроен ко мне. я в безопасности. я поддерживаю мир с жизнью и окружающими меня людьми.
+        </div>
+      </div>
+
+      <div class="disease-item">
+        <div class="disease-title" tabindex="0">
+          <span class="disease-name">Альцгеймера болезнь (слабоумие)</span> – (<span class="author-hei">Луиза Хэй</span>)
+        </div>
+        <div class="disease-details">
+          <span class="minus">–</span> нежелание воспринимать мир таким, какой он есть. безнадежность и беспомощность. гнев.<br>
+          <span class="plus">+</span> всегда найдется новая возможность полнее ощутить жизнь. я прощаюсь со своим прошлым. я начинаю жить радостно.
+        </div>
+      </div>
+      <div class="disease-item">
+        <div class="disease-title" tabindex="0">
+          <span class="disease-name">Альцгеймера болезнь (слабоумие)</span> – (<span class="author-zhikarencev">В. Жикаренцев</span>)
+        </div>
+        <div class="disease-details">
+          <span class="minus">–</span> желание покинуть эту планету. неспособность посмотреть жизни в лицо. безнадежность и беспомощность.<br>
+          <span class="plus">+</span> все, что в этой жизни происходит, правильно и имеет свой смысл в пространстве и времени. божественный план претворяется в жизнь.
+        </div>
+      </div>
+      <!-- ... далее все остальные болезни на "А" по вашему тексту ... -->
+      <!-- Смело копируйте шаблон disease-item и вставляйте новые болезни -->
+
+    </div>
+  </div>
+
+  <!-- Шаблоны для остальных букв -->
+  <div class="letter-section" id="letter-B">
+    <div class="letter-title" tabindex="0">Б</div>
+    <div class="letter-diseases">
+      <!-- Сюда вставляйте болезни на букву Б -->
+    </div>
+  </div>
+  <div class="letter-section" id="letter-V">
+    <div class="letter-title" tabindex="0">В</div>
+    <div class="letter-diseases">
+      <!-- Сюда вставляйте болезни на букву В -->
+    </div>
+  </div>
+  <div class="letter-section" id="letter-G">
+    <div class="letter-title" tabindex="0">Г</div>
+    <div class="letter-diseases">
+      <!-- Сюда вставляйте болезни на букву Г -->
+    </div>
+  </div>
+  <div class="letter-section" id="letter-D">
+    <div class="letter-title" tabindex="0">Д</div>
+    <div class="letter-diseases">
+      <!-- Сюда вставляйте болезни на букву Д -->
+    </div>
+  </div>
+  <div class="letter-section" id="letter-E">
+    <div class="letter-title" tabindex="0">Е</div>
+    <div class="letter-diseases">
+      <!-- Сюда вставляйте болезни на букву Е -->
+    </div>
+  </div>
+  <!-- ... и так далее до Я ... -->
+  <div class="letter-section" id="letter-Ya">
+    <div class="letter-title" tabindex="0">Я</div>
+    <div class="letter-diseases">
+      <!-- Сюда вставляйте болезни на букву Я -->
+    </div>
+  </div>
+
+  <script>
+    // Аккордеон для букв
+    document.querySelectorAll('.letter-title').forEach(letter => {
+      letter.addEventListener('click', function() {
+        this.parentElement.classList.toggle('open');
+      });
+      letter.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    });
+    // Аккордеон для болезней
+    document.querySelectorAll('.disease-title').forEach(disease => {
+      disease.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.parentElement.classList.toggle('open');
+      });
+      disease.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
